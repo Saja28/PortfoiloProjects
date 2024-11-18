@@ -143,9 +143,6 @@ FROM CovidDeaths dea
  SELECT *,(RollingPeopleVaccinated/population)*100
  from #PercentPopulationVaccinated
 
-
-
-
  -- Creating View to store date for later visualizations
  Create view PercentPopulationVaccinated AS
  
