@@ -6,8 +6,6 @@ SELECT * FROM CovidDeaths
 SELECT  location,date, total_cases, new_cases, total_deaths,population
 FROM CovidDeaths
 ORDER BY 1,2 
-
-
 ---Looking at Total cases vs Total Deaths
 --Shows likelihood of dying if you contract covid in your country 
 
@@ -70,7 +68,6 @@ WHERE continent IS NOT NULL
 GROUP BY continent
 ORDER BY TotalDeathCount DESC
 
-
 -- GLOBAL NUMBERS
 SELECT  
 	
@@ -82,8 +79,6 @@ FROM CovidDeaths
 WHERE continent IS NOT NULL
 --GROUP BY date
 ORDER BY 1,2
-
-
 --Looking At Total Population vs vaccination
 SELECT dea.continent, dea.location,dea.date, dea.population, vac.new_vaccinations
 	, SUM(CONVERT(INT,vac.new_vaccinations)) OVER (PARTITION BY dea.location ORDER BY dea.location, 
